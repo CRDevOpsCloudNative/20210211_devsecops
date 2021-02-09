@@ -1,5 +1,5 @@
 name: devsecops
-on: [push]
+on: [push, pull_request]
 jobs:
   checkov-job:
     runs-on: ubuntu-latest
