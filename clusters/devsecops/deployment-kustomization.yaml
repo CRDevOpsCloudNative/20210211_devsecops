@@ -1,0 +1,13 @@
+piVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: microservices
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./check_this/manifests
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  validation: client
