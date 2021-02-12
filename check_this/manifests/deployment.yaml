@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emailservice
+  name: emailservice2
   namespace: microservices
   annotations:
     seccomp.security.alpha.kubernetes.io/pod: "runtime/default"
 spec:
   selector:
     matchLabels:
-      app: emailservice
+      app: emailservice2
   template:
     metadata:
       labels:
-        app: emailservice
+        app: emailservice2
       annotations:
         seccomp.security.alpha.kubernetes.io/pod: "runtime/default"
     spec:
@@ -50,7 +50,7 @@ spec:
             command: ["/bin/grpc_health_probe", "-addr=:8080"]
         resources:
           requests:
-            cpu: 100m
+            cpu: 50m
             memory: 64Mi
           limits:
             cpu: 200m
