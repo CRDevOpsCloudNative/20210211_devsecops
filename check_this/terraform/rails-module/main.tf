@@ -48,6 +48,7 @@ resource "aws_security_group" "example_rails_app" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+
   # Outbound everything
   egress {
     from_port   = 0
