@@ -48,6 +48,7 @@ resource "aws_security_group" "example_rails_app" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # TODO: Esto es temporal
   ingress {
     from_port   = 22
     to_port     = 22
